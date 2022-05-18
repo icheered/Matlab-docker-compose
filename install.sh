@@ -1,9 +1,5 @@
 #!/bin/bash
-FILE=~/.local/share/applications/matlab.desktop
-if test -f "$FILE"; then
-    echo "$FILE exists."
-else
-    echo Matlab.desktop does not exist, creating
-    sed -i "s|^Exec.*|Exec=$PWD/matlab.sh|" matlab.desktop
-    cp matlab.desktop ~/.local/share/applications/
-fi
+echo "Setting directories correctly"
+sed -i "s|^  docker-compose.*|  docker-compose -f $PWD/docker-compose.yml up -d matlab|" matlab.sh
+
+

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Exec=/home/tjbakker/Software/Matlab-docker-compose/matlab.sh
+Type=Application
+Categories=Development
+Name=MatLab
+
+
+sed -i "s|^Exec.*|Exec=$PWD/matlab.sh|" matlab.desktop

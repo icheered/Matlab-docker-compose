@@ -1,0 +1,11 @@
+version: '2'
+services:
+  matlab:
+    image: mathworks/matlab:r2022a
+    container_name: matlab
+    restart: "no"
+    ports: 
+      - 8888:8888
+    volumes:
+      - ~:/home/matlab/
+    command: '-browser'

@@ -3,6 +3,3 @@ Exec=/your/clone/path/Matlab-docker-compose/matlab.sh
 Type=Application
 Categories=Development
 Name=MatLab
-
-
-sed -i "s|^Exec.*|Exec=$PWD/matlab.sh|" matlab.desktop

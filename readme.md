@@ -3,6 +3,7 @@ Make sure you have `docker` and `docker-compose` installed.
 
 ## Quick start
 `$ docker-compose up -d matlab`
+Matlab is now accesible on `http://localhost:8888/index.html`
 
 ## Automation
 - Clone this repository 

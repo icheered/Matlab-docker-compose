@@ -6,7 +6,7 @@ if [[ $(docker ps --format '{{.Names}}' | grep -E "^${container_name}\$") ]]; th
 if [ $running -eq 0 ];
 then
   echo Matlab not running, starting container
-  docker-compose -f /your/clone/path/Matlab-docker-compose/docker-compose.yml up -d matlab
+  docker-compose -f /home/tjbakker/Software/Matlab-docker-compose/docker-compose.yml up -d matlab
 fi
 echo Starting browser
 $BROWSER http://localhost:8888/index.html

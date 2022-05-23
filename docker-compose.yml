@@ -1,11 +1,17 @@
-version: '2'
+version: '3'
 services:
   matlab:
     image: mathworks/matlab:r2022a
     container_name: matlab
+    stdin_open: true # docker run -i
+    tty: true # docker run -t
     restart: "no"
-    ports: 
+    shm_size: '512M'
+    ports:
+      - 5901:5901
+      - 6080:6080
       - 8888:8888
     volumes:
-      - ~:/home/matlab/
+      - ~/Documents:/home/matlab/Documents
+      # - ./MATLABTOOLBOX/toolbox:/opt/matlab/R2022a/toolbox
     command: '-browser'
